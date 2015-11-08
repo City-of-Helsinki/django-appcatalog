@@ -1,0 +1,14 @@
+from modeltranslation.translator import translator, TranslationOptions
+from .models import *
+
+
+class ApplicationTranslationOptions(TranslationOptions):
+    fields = ('name', 'short_description', 'description')
+translator.register(Application, ApplicationTranslationOptions)
+
+
+class BaseTagTranslationOptions(TranslationOptions):
+    fields = ('name',)
+translator.register(Platform, BaseTagTranslationOptions)
+translator.register(Category, BaseTagTranslationOptions)
+translator.register(Accessibility, BaseTagTranslationOptions)

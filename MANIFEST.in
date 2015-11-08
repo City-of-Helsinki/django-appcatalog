@@ -1,0 +1,4 @@
+include LICENSE
+include README.rst
+recursive-include appcatalog/static *
+recursive-include appcatalog/templates *
